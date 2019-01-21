@@ -1,0 +1,30 @@
+---
+title: "Plotting the mtcars dataset"
+---
+
+```{r include = FALSE}
+library(plotly)
+
+mtcars$cyl <- as.factor(mtcars$cyl)
+levels(mtcars$cyl) <- c("4 cyl", "6 cyl", "8 cyl")
+```
+
+Hi there!
+
+**It is now `r Sys.Date()`** as I compile this page. This is a small assignment done for the Coursera Data Science specialization. Please enjoy some visualizations of some real cool retro cars!
+
+### Fuel economy by number of cylinders
+
+```{r}
+plot_ly(y = mtcars$mpg, color = mtcars$cyl, type = "box")
+```
+
+### 1/4 mile times by horsepower
+
+```{r}
+fit <- lm(hp ~ qsec, mtcars)
+mtcars %>%
+  plot_ly(x = ~qsec) %>%
+  add_markers(y = ~hp, color = ~cyl) %>%
+  add_lines(x = ~qsec, y = fitted(fit), showlegend = FALSE)
+```

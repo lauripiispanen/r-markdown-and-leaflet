@@ -1,6 +1,8 @@
 name: "my-favorite-restaurants"
 navbar:
-  title: "Some of my favorite restaurants in Helsinki"
+  title: "Coursera Data Science Specialization assignments"
   left:
-    - text: "Home"
+    - text: "Leaflet"
       href: index.html
+    - text: "Plotly"
+      href: plotly.html
