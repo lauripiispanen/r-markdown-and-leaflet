@@ -17,6 +17,10 @@ mtcars$cyl <- as.factor(mtcars$cyl)
 levels(mtcars$cyl) <- c("4 cyl", "6 cyl", "8 cyl")
 ```
 
+```{r}
+plot_ly(x = mtcars$mpg, type = "histogram")
+```
+
 # Fuel economy by number of cylinders
 
 ```{r}
