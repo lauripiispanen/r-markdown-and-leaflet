@@ -1,0 +1,6 @@
+name: "my-favorite-restaurants"
+navbar:
+  title: "Some of my favorite restaurants in Helsinki"
+  left:
+    - text: "Home"
+      href: index.html

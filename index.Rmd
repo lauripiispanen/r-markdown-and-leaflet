@@ -1,0 +1,27 @@
+---
+title: "Some of my favorite restaurants in Helsinki"
+---
+
+```{r include = FALSE}
+library(leaflet)
+```
+
+
+Hi there!
+
+**It is now `r Sys.Date()`** as I compile this page. This is a small assignment done for the Coursera Data Science specialization. While you're looking at this, here's a bunch of my favorite restaurants. If you ever happen to visit Helsinki, be sure to check these out!
+```{r, include = FALSE}
+restaurants <- data.frame(
+  lat = c(60.158196, 60.170298, 60.171141, 60.186011, 60.169332, 60.177713),
+  lng = c(24.934568, 24.958396, 24.932730, 24.953489, 24.949061, 24.928050),
+  name = c("BasBas", "Kuurna", "Ateljé Finne", "Wino", "Copas y Tapas", "Kuu")
+)
+```
+
+
+```{r}
+leaflet() %>%
+  setView(lat = 60.1659, lng = 24.9394, zoom = 12) %>%
+  addTiles %>%
+  addMarkers(lat = restaurants$lat, lng = restaurants$lng, label = restaurants$name)
+```
