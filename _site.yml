@@ -1,4 +1,5 @@
 name: "my-favorite-restaurants"
+output_dir: "."
 navbar:
   title: "Coursera Data Science Specialization assignments"
   left:
